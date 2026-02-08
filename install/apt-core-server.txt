@@ -1,0 +1,16 @@
+curl
+wget
+git
+htop
+tmux
+unzip
+pkg-config
+gnome-tweaks
+pavucontrol
+timeshift
+openssh-server
+ufw
+ca-certificates
+rsync
+cron
+logrotate
