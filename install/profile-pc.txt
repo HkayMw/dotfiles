@@ -1,4 +1,0 @@
-apt-core
-apt-dev
-apt-optional
-snap
