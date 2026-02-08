@@ -16,8 +16,9 @@ echo "→ Setting timezone to Africa/Blantyre"
 sudo timedatectl set-timezone Africa/Blantyre
 
 # 3. Enable SSH (useful for remote access or Ansible later)
-echo "→ Enabling SSH service"
-sudo systemctl enable --now ssh
+echo "→ Configuring SSH (socket activation)"
+sudo apt install -y openssh-server
+sudo systemctl enable --now ssh.socket 2>/dev/null || sudo systemctl enable --now ssh
 
 # 4. Install Docker via official repository (recommended method)
 echo "→ Installing Docker (official repository)"

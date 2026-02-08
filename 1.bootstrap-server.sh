@@ -15,9 +15,11 @@ sudo apt autoremove -y
 echo "→ Setting timezone to Africa/Blantyre"
 sudo timedatectl set-timezone Africa/Blantyre
 
-# 3. Enable SSH (already enabled during install, but ensure it is active)
-echo "→ Ensuring SSH is enabled"
-sudo systemctl enable --now ssh
+# 3. SSH — socket activation + fail2ban protection
+echo "→ Configuring SSH (socket activation)"
+sudo apt install -y openssh-server
+sudo systemctl enable --now ssh.socket 2>/dev/null || sudo systemctl enable --now ssh
+sudo systemctl enable fail2ban
 
 # 4. Install Docker via official repository
 echo "→ Installing Docker (official repository)"
