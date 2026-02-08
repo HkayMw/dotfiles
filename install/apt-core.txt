@@ -8,4 +8,5 @@ pkg-config
 gnome-tweaks
 pavucontrol
 timeshift
+stow
 
