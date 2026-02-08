@@ -1,0 +1,6 @@
+anydesk
+onlyoffice-desktopeditors
+copyq
+gitg
+gitk
+gnome-shell-pomodoro

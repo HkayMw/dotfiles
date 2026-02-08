@@ -1,0 +1,11 @@
+curl
+wget
+git
+htop
+tmux
+unzip
+pkg-config
+gnome-tweaks
+pavucontrol
+timeshift
+

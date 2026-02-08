@@ -1,0 +1,7 @@
+code
+insomnia
+sqlitebrowser
+vlc
+qbittorrent-arnatious
+dbeaver-ce
+
