@@ -1,5 +1,3 @@
-anydesk
-onlyoffice-desktopeditors
 copyq
 gitg
 gitk

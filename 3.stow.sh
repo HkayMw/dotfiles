@@ -3,7 +3,7 @@ set -euo pipefail
 
 # stow.sh — Automates Stow for your dotfiles packages
 
-DOTFILES_DIR="$$   (cd "   $$(dirname "$0")" && pwd)"
+DOTFILES_DIR="$(cd "$(dirname "$0")" && pwd)"
 cd "$DOTFILES_DIR" || exit 1
 
 # List of packages (directories) to manage

@@ -1,7 +1,8 @@
-code
+code --classic
 insomnia
 sqlitebrowser
 vlc
 qbittorrent-arnatious
 dbeaver-ce
+onlyoffice-desktopeditors
 
