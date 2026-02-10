@@ -47,9 +47,16 @@ sudo ufw allow OpenSSH
 sudo ufw --force enable
 
 # 6. Install fail2ban (brute-force protection – essential for internet-facing servers)
-echo "→ Installing fail2ban"
+# echo "→ Installing fail2ban"
+# sudo apt install -y fail2ban
+# sudo systemctl enable fail2ban
+# 6. Install fail2ban (brute-force protection – essential for internet-facing servers)
+echo "→ Installing fail2ban (compatible version for Ubuntu 24.04)"
+sudo add-apt-repository ppa:acraig/fail2ban -y || true
+sudo apt update
 sudo apt install -y fail2ban
 sudo systemctl enable fail2ban
+sudo systemctl start fail2ban || true
 
 # 7. Enable automatic security updates
 echo "→ Enabling unattended-upgrades"
