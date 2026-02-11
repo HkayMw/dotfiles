@@ -3,6 +3,5 @@ insomnia
 sqlitebrowser
 vlc
 qbittorrent-arnatious
-
 spotify
 

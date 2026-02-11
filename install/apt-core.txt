@@ -9,4 +9,5 @@ gnome-tweaks
 pavucontrol
 timeshift
 stow
+libfuse2t64
 
