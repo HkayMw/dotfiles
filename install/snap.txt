@@ -3,6 +3,6 @@ insomnia
 sqlitebrowser
 vlc
 qbittorrent-arnatious
-dbeaver-ce --classic
-onlyoffice-desktopeditors
+
+spotify
 
