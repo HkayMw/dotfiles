@@ -1,0 +1,74 @@
+﻿Manual / External Installs
+Google Chrome
+* Download .deb from official Google site
+* Install:
+* sudo dpkg -i google-chrome-stable_current_amd64.deb
+* sudo apt -f install
+* 
+MongoDB Compass
+* Download .deb from mongodb.com
+* Install via:
+* sudo dpkg -i mongodb-compass_*.deb
+* 
+* Used strictly as a GUI client
+* Databases run inside Docker containers
+Arduino IDE (2.x Preferred – AppImage Method)
+Method: AppImage (not Snap, not tarball)
+1. Download Linux 64-bit AppImage from arduino.cc
+2. Create install directory:
+3. sudo mkdir -p /opt/arduino-ide
+4. 
+5. Move AppImage:
+6. sudo mv arduino-ide_*.AppImage /opt/arduino-ide/
+7. 
+8. Make executable:
+9. sudo chmod +x /opt/arduino-ide/arduino-ide_*.AppImage
+10. 
+11. Extract icon (optional but recommended):
+12. cd /opt/arduino-ide
+13. ./arduino-ide_*.AppImage --appimage-extract
+14. sudo cp squashfs-root/resources/app/resources/icons/512x512.png /usr/share/icons/arduino-ide.png
+15. 
+16. Create desktop entry:
+17. sudo nano /usr/share/applications/arduino-ide.desktop
+18. 
+19. Use:
+20. [Desktop Entry]
+21. Name=Arduino IDE
+22. Exec=/opt/arduino-ide/arduino-ide_2.3.7_Linux_64bit.AppImage --no-sandbox
+23. Icon=/usr/share/icons/arduino-ide.png
+24. Type=Application
+25. Categories=Development;IDE;
+26. Terminal=false
+27. StartupWMClass=Arduino IDE
+28. 
+Important:
+* --no-sandbox required on this system due to Electron SUID sandbox issue.
+* Do NOT run with sudo.
+Uninstall:
+sudo rm -rf /opt/arduino-ide
+sudo rm /usr/share/applications/arduino-ide.desktop
+sudo rm /usr/share/icons/arduino-ide.png
+
+Cursor
+* Installed via official .deb
+* AI-assisted editor
+* Installed with:
+* sudo dpkg -i cursor_*.deb
+* sudo apt -f install
+* 
+OnlyOffice
+* Installed via .deb when needed
+* Remove when not required to reduce system clutter
+Xtreme Download Manager (XDM)
+* Installed manually
+* Stores data in:
+* ~/.xdman
+* 
+* Not tracked by system package manager
+VS Code Extensions
+* Reinstalled via:
+	* Settings Sync
+ or
+	* Manual reinstall list
+* Extensions are user-scoped (~/.vscode)
